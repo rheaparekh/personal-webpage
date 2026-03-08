@@ -41,11 +41,8 @@ const PublicationsSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <p className="font-mono text-xs tracking-[0.3em] uppercase text-accent mb-3">
-            // Publications
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-16">
-            Published Research
+          <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-foreground">
+            Publications
           </h2>
         </motion.div>
 

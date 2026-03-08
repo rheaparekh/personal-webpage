@@ -48,10 +48,7 @@ const ExperienceSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <p className="font-mono text-xs tracking-[0.3em] uppercase text-primary mb-3">
-            // Career
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-16">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-foreground">
             Industry Experience
           </h2>
         </motion.div>
