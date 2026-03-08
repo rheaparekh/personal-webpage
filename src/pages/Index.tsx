@@ -14,11 +14,11 @@ const Index = () => {
       <NavBar />
       <main className="relative z-10">
         <HeroSection />
+        <EducationSection />
         <ResearchSection />
         <PublicationsSection />
         <ExperienceSection />
         <AchievementsSection />
-        <EducationSection />
         <footer className="py-12 text-center border-t border-border/30">
           <p className="font-mono text-xs text-muted-foreground">
             © {new Date().getFullYear()} Rhea Parekh · Built with ✦
