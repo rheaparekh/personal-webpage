@@ -1,64 +1,21 @@
-import { motion } from "framer-motion";
-import { GraduationCap } from "lucide-react";
-
-const education = [
-  {
-    school: "Columbia University",
-    degree: "Masters in Computer Science",
-    period: "2024 – Expected 2027",
-    location: "New York",
-  },
-  {
-    school: "Indian Institute of Technology, Roorkee",
-    degree: "B.Tech. Engineering Physics",
-    period: "2016 – 2020",
-    location: "Roorkee, India",
-    note: "CGPA: 8.63/10, Ranked 3rd class-wise",
-  },
-];
-
 const EducationSection = () => {
   return (
-    <section className="relative py-16 px-6" id="education">
-      <div className="max-w-5xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-foreground">Education</h2>
-        </motion.div>
-
-        <div className="grid gap-6 md:grid-cols-2">
-          {education.map((edu, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="glow-card rounded-xl bg-card p-6"
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                  <GraduationCap className="w-5 h-5 text-secondary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground">{edu.school}</h3>
-                  <p className="text-secondary text-sm">{edu.degree}</p>
-                  <p className="font-mono text-xs text-muted-foreground mt-1">
-                    {edu.period} · {edu.location}
-                  </p>
-                  {edu.note && (
-                    <p className="text-xs text-muted-foreground mt-2">
-                      {edu.note}
-                    </p>
-                  )}
-                </div>
-              </div>
-            </motion.div>
-          ))}
+    <section className="py-10 px-6" id="education">
+      <div className="max-w-2xl mx-auto">
+        <h2 className="text-2xl font-semibold mb-6 text-foreground">Education</h2>
+        <div className="space-y-4">
+          <div>
+            <p className="font-medium text-foreground">Columbia University</p>
+            <p className="text-sm text-muted-foreground">
+              Masters in Computer Science · 2024 – Expected 2027
+            </p>
+          </div>
+          <div>
+            <p className="font-medium text-foreground">Indian Institute of Technology, Roorkee</p>
+            <p className="text-sm text-muted-foreground">
+              B.Tech. Engineering Physics · CGPA: 8.63/10, Ranked 3rd class-wise · 2016 – 2020
+            </p>
+          </div>
         </div>
       </div>
     </section>
