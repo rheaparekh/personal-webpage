@@ -1,6 +1,3 @@
-import { motion } from "framer-motion";
-import { FileText } from "lucide-react";
-
 const publications = [
   {
     title: "Quantum certification and benchmarking",
@@ -33,54 +30,19 @@ const publications = [
 
 const PublicationsSection = () => {
   return (
-    <section className="relative py-16 px-6" id="publications">
-      <div className="max-w-5xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-foreground">
-            Publications
-          </h2>
-        </motion.div>
-
-        <div className="space-y-4">
+    <section className="py-10 px-6" id="publications">
+      <div className="max-w-2xl mx-auto">
+        <h2 className="text-2xl font-semibold mb-6 text-foreground">Publications</h2>
+        <div className="space-y-5">
           {publications.map((pub, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="glow-card rounded-xl bg-card p-6 flex gap-4 group hover:bg-card/80 transition-colors"
-            >
-              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mt-1">
-                <FileText className="w-5 h-5 text-accent" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground group-hover:text-accent transition-colors leading-snug">
-                  {pub.title}
-                </h3>
-                <p className="text-sm text-muted-foreground mt-1">
-                  {pub.authors}
-                </p>
-                <div className="flex items-center gap-3 mt-2 flex-wrap">
-                  <span className="font-mono text-xs text-primary">
-                    {pub.year}
-                  </span>
-                  {pub.citations && (
-                    <span className="font-mono text-xs text-accent">
-                      Cited by {pub.citations}
-                    </span>
-                  )}
-                  <span className="text-xs text-muted-foreground">
-                    {pub.venue}
-                  </span>
-                </div>
-              </div>
-            </motion.div>
+            <div key={i}>
+              <p className="font-medium text-foreground leading-snug">{pub.title}</p>
+              <p className="text-sm text-muted-foreground mt-0.5">{pub.authors}</p>
+              <p className="text-sm text-muted-foreground italic">{pub.venue}, {pub.year}</p>
+              {pub.citations && (
+                <p className="text-xs text-muted-foreground mt-1">Cited by {pub.citations}</p>
+              )}
+            </div>
           ))}
         </div>
       </div>

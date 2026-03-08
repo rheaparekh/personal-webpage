@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 const research = [
   {
     role: "Research Assistant",
@@ -36,46 +34,22 @@ const research = [
 
 const ResearchSection = () => {
   return (
-    <section className="relative py-16 px-6" id="research">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(200_60%_50%_/_0.05)_0%,_transparent_60%)]" />
-      <div className="max-w-5xl mx-auto relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-foreground">
-            Research Experience
-          </h2>
-        </motion.div>
-
-        <div className="grid gap-6 md:grid-cols-2">
+    <section className="py-10 px-6" id="research">
+      <div className="max-w-2xl mx-auto">
+        <h2 className="text-2xl font-semibold mb-6 text-foreground">Research Experience</h2>
+        <div className="space-y-6">
           {research.map((r, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="glow-card rounded-xl bg-card p-6 group hover:bg-card/80 transition-colors"
-            >
-              <span className="font-mono text-xs text-muted-foreground">
-                {r.period}
-              </span>
-              <h3 className="text-lg font-semibold mt-2 text-foreground">
-                {r.role}
-              </h3>
-              <p className="text-secondary text-sm font-medium">{r.org}</p>
+            <div key={i}>
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                <p className="font-medium text-foreground">{r.role}</p>
+                <span className="text-xs text-muted-foreground whitespace-nowrap">{r.period}</span>
+              </div>
+              <p className="text-sm text-primary">{r.org}</p>
               {r.advisor && (
-                <p className="text-xs text-muted-foreground font-mono mt-1">
-                  {r.advisor}
-                </p>
+                <p className="text-xs text-muted-foreground italic">{r.advisor}</p>
               )}
-              <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
-                {r.description}
-              </p>
-            </motion.div>
+              <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{r.description}</p>
+            </div>
           ))}
         </div>
       </div>

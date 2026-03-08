@@ -1,27 +1,23 @@
-import StarField from "@/components/StarField";
-import NavBar from "@/components/NavBar";
 import HeroSection from "@/components/HeroSection";
-import ExperienceSection from "@/components/ExperienceSection";
+import EducationSection from "@/components/EducationSection";
 import ResearchSection from "@/components/ResearchSection";
 import PublicationsSection from "@/components/PublicationsSection";
+import ExperienceSection from "@/components/ExperienceSection";
 import AchievementsSection from "@/components/AchievementsSection";
-import EducationSection from "@/components/EducationSection";
 
 const Index = () => {
   return (
-    <div className="relative min-h-screen bg-background overflow-x-hidden">
-      <StarField />
-      <NavBar />
-      <main className="relative z-10">
+    <div className="min-h-screen bg-background">
+      <main className="relative">
         <HeroSection />
         <EducationSection />
         <ResearchSection />
         <PublicationsSection />
         <ExperienceSection />
         <AchievementsSection />
-        <footer className="py-12 text-center border-t border-border/30">
-          <p className="font-mono text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Rhea Parekh · Built with ✦
+        <footer className="py-8 text-center">
+          <p className="text-xs text-muted-foreground">
+            © {new Date().getFullYear()} Rhea Parekh
           </p>
         </footer>
       </main>

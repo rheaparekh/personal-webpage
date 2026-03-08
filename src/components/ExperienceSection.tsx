@@ -1,10 +1,8 @@
-import { motion } from "framer-motion";
-
 const experiences = [
   {
     role: "Software Engineer",
     company: "Meta",
-    location: "NY, United States",
+    location: "NY",
     team: "Storage Node",
     period: "Aug 2024 – Present",
     description: "Building reliable and efficient infrastructure for warm storage fabric at Meta.",
@@ -12,7 +10,7 @@ const experiences = [
   {
     role: "Software Engineer",
     company: "Microsoft",
-    location: "Redmond, United States",
+    location: "Redmond",
     team: "Azure Front Door Linux Platform",
     period: "Mar 2021 – Aug 2024",
     description:
@@ -40,63 +38,22 @@ const experiences = [
 
 const ExperienceSection = () => {
   return (
-    <section className="relative py-16 px-6" id="experience">
-      <div className="max-w-5xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-2xl md:text-3xl font-semibold mb-10 text-foreground">
-            Industry Experience
-          </h2>
-        </motion.div>
-
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-secondary/50 to-transparent" />
-
-          <div className="space-y-12">
-            {experiences.map((exp, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="relative pl-8 md:pl-20"
-              >
-                {/* Timeline dot */}
-                <div className="absolute left-0 md:left-8 top-2 w-2 h-2 rounded-full bg-primary -translate-x-[3.5px] shadow-[0_0_8px_hsl(265_80%_65%_/_0.5)]" />
-
-                <div className="glow-card rounded-xl bg-card p-6 hover:bg-card/80 transition-colors">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground">
-                        {exp.role}
-                      </h3>
-                      <p className="text-primary font-medium">
-                        {exp.company}
-                        <span className="text-muted-foreground font-normal">
-                          {" "}· {exp.location}
-                        </span>
-                      </p>
-                    </div>
-                    <span className="font-mono text-xs text-muted-foreground whitespace-nowrap">
-                      {exp.period}
-                    </span>
-                  </div>
-                  <p className="text-sm text-muted-foreground font-mono mb-2">
-                    Team: {exp.team}
-                  </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {exp.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+    <section className="py-10 px-6" id="experience">
+      <div className="max-w-2xl mx-auto">
+        <h2 className="text-2xl font-semibold mb-6 text-foreground">Industry Experience</h2>
+        <div className="space-y-6">
+          {experiences.map((exp, i) => (
+            <div key={i}>
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                <p className="font-medium text-foreground">
+                  {exp.role}, <span className="text-primary">{exp.company}</span>
+                </p>
+                <span className="text-xs text-muted-foreground whitespace-nowrap">{exp.period}</span>
+              </div>
+              <p className="text-xs text-muted-foreground">{exp.team} · {exp.location}</p>
+              <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{exp.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
