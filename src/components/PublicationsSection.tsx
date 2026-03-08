@@ -33,7 +33,7 @@ const publications = [
 
 const PublicationsSection = () => {
   return (
-    <section className="relative py-32 px-6" id="publications">
+    <section className="relative py-16 px-6" id="publications">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -36,7 +36,7 @@ const achievements = [
 
 const AchievementsSection = () => {
   return (
-    <section className="relative py-32 px-6" id="achievements">
+    <section className="relative py-16 px-6" id="achievements">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_hsl(170_70%_45%_/_0.05)_0%,_transparent_60%)]" />
       <div className="max-w-5xl mx-auto relative z-10">
         <motion.div
