@@ -1,4 +1,3 @@
-import StarField from "@/components/StarField";
 import HeroSection from "@/components/HeroSection";
 import EducationSection from "@/components/EducationSection";
 import ResearchSection from "@/components/ResearchSection";
