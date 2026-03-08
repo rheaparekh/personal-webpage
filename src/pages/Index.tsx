@@ -14,9 +14,9 @@ const Index = () => {
       <NavBar />
       <main className="relative z-10">
         <HeroSection />
-        <ExperienceSection />
         <ResearchSection />
         <PublicationsSection />
+        <ExperienceSection />
         <AchievementsSection />
         <EducationSection />
         <footer className="py-12 text-center border-t border-border/30">
