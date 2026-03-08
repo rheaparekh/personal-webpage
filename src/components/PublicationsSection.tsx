@@ -39,9 +39,6 @@ const PublicationsSection = () => {
               <p className="font-medium text-foreground leading-snug">{pub.title}</p>
               <p className="text-sm text-muted-foreground mt-0.5">{pub.authors}</p>
               <p className="text-sm text-muted-foreground italic">{pub.venue}, {pub.year}</p>
-              {pub.citations && (
-                <p className="text-xs text-muted-foreground mt-1">Cited by {pub.citations}</p>
-              )}
             </div>
           ))}
         </div>
