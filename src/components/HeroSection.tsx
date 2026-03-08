@@ -42,7 +42,7 @@ const HeroSection = () => {
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           MS Computer Science @ Columbia University · Software Engineer @ Meta · 
-          Interested in quantum computing, cryptography, and theory.
+          Interested in quantum computing theory and cryptography.
         </motion.p>
 
         <motion.div
