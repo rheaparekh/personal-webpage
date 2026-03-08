@@ -19,7 +19,7 @@ const education = [
 
 const EducationSection = () => {
   return (
-    <section className="relative py-32 px-6" id="education">
+    <section className="relative py-16 px-6" id="education">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
