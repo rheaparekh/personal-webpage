@@ -69,10 +69,15 @@ const PublicationsSection = () => {
                 <p className="text-sm text-muted-foreground mt-1">
                   {pub.authors}
                 </p>
-                <div className="flex items-center gap-3 mt-2">
+                <div className="flex items-center gap-3 mt-2 flex-wrap">
                   <span className="font-mono text-xs text-primary">
                     {pub.year}
                   </span>
+                  {pub.citations && (
+                    <span className="font-mono text-xs text-accent">
+                      Cited by {pub.citations}
+                    </span>
+                  )}
                   <span className="text-xs text-muted-foreground">
                     {pub.venue}
                   </span>
