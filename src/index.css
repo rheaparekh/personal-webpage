@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,48 +6,44 @@
 
 @layer base {
   :root {
-    --background: 230 25% 5%;
-    --foreground: 220 20% 90%;
+    --background: 220 20% 4%;
+    --foreground: 210 15% 85%;
 
-    --card: 230 20% 8%;
-    --card-foreground: 220 20% 90%;
+    --card: 220 16% 7%;
+    --card-foreground: 210 15% 85%;
 
-    --popover: 230 20% 8%;
-    --popover-foreground: 220 20% 90%;
+    --popover: 220 16% 7%;
+    --popover-foreground: 210 15% 85%;
 
-    --primary: 265 80% 65%;
+    --primary: 210 40% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 200 60% 50%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 210 15% 25%;
+    --secondary-foreground: 210 15% 85%;
 
-    --muted: 230 15% 15%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 220 12% 12%;
+    --muted-foreground: 210 8% 45%;
 
-    --accent: 170 70% 45%;
+    --accent: 210 30% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 230 15% 18%;
-    --input: 230 15% 18%;
-    --ring: 265 80% 65%;
+    --border: 220 12% 14%;
+    --input: 220 12% 14%;
+    --ring: 210 40% 55%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --glow-primary: 265 80% 65%;
-    --glow-secondary: 200 60% 50%;
-    --glow-accent: 170 70% 45%;
-
-    --sidebar-background: 230 25% 5%;
-    --sidebar-foreground: 220 20% 90%;
-    --sidebar-primary: 265 80% 65%;
+    --sidebar-background: 220 20% 4%;
+    --sidebar-foreground: 210 15% 85%;
+    --sidebar-primary: 210 40% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 230 15% 15%;
-    --sidebar-accent-foreground: 220 20% 90%;
-    --sidebar-border: 230 15% 18%;
-    --sidebar-ring: 265 80% 65%;
+    --sidebar-accent: 220 12% 12%;
+    --sidebar-accent-foreground: 210 15% 85%;
+    --sidebar-border: 220 12% 14%;
+    --sidebar-ring: 210 40% 55%;
   }
 }
 
@@ -58,39 +54,33 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', sans-serif;
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
   }
 
   code, .font-mono {
-    font-family: 'Space Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
   }
 }
 
 /* Star field animation */
 @keyframes twinkle {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-}
-
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px hsl(265 80% 65% / 0.2); }
-  50% { box-shadow: 0 0 40px hsl(265 80% 65% / 0.4); }
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.6; }
 }
 
 .star {
   position: absolute;
   border-radius: 50%;
-  background: white;
-  animation: twinkle var(--duration, 3s) ease-in-out infinite;
+  background: hsl(210 20% 70%);
+  animation: twinkle var(--duration, 4s) ease-in-out infinite;
   animation-delay: var(--delay, 0s);
 }
 
@@ -107,9 +97,9 @@
   padding: 1px;
   background: linear-gradient(
     135deg,
-    hsl(var(--primary) / 0.3),
-    transparent 50%,
-    hsl(var(--secondary) / 0.3)
+    hsl(var(--primary) / 0.15),
+    transparent 60%,
+    hsl(var(--accent) / 0.1)
   );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -119,12 +109,12 @@
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 ::-webkit-scrollbar-track {
   background: hsl(var(--background));
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--muted-foreground) / 0.3);
-  border-radius: 3px;
+  background: hsl(var(--muted-foreground) / 0.2);
+  border-radius: 2px;
 }

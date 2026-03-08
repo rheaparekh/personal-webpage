@@ -3,95 +3,78 @@ import { ExternalLink } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
-      {/* Radial gradient background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(265_80%_65%_/_0.08)_0%,_transparent_70%)]" />
-      <div className="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-primary/5 blur-[120px]" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 rounded-full bg-secondary/5 blur-[120px]" />
+    <section className="relative min-h-[85vh] flex items-center justify-center px-6 overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(210_40%_55%_/_0.04)_0%,_transparent_70%)]" />
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
+      <div className="relative z-10 max-w-3xl mx-auto text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <p className="font-mono text-sm tracking-[0.3em] uppercase text-primary mb-6">
-            // Software Engineer & Quantum Computing Researcher
+          <p className="font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground mb-8">
+            Software Engineer · Researcher
           </p>
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.15 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6"
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight mb-6 text-foreground"
         >
-          <span className="bg-gradient-to-r from-foreground via-foreground to-muted-foreground bg-clip-text text-transparent">
-            Rhea
-          </span>
-          <br />
-          <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-            Parekh
-          </span>
+          Rhea Parekh
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-4 leading-relaxed"
+        >
+          MS Computer Science @ Columbia University · Software Engineer @ Meta
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-sm text-muted-foreground max-w-lg mx-auto mb-10"
         >
-          MS Computer Science @ Columbia University · Software Engineer @ Meta · 
           Interested in quantum computing theory and cryptography.
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.45 }}
-          className="flex flex-wrap gap-4 justify-center"
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="flex flex-wrap gap-3 justify-center"
         >
           <a
             href="https://scholar.google.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/20 text-primary hover:bg-primary/20 hover:border-primary/40 transition-all duration-300 font-mono text-sm"
+            className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-muted border border-border text-foreground hover:border-primary/30 transition-all duration-300 font-mono text-xs"
           >
             Google Scholar
-            <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            <ExternalLink className="w-3 h-3 opacity-40 group-hover:opacity-100 transition-opacity" />
           </a>
           <a
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-secondary/10 border border-secondary/20 text-secondary hover:bg-secondary/20 hover:border-secondary/40 transition-all duration-300 font-mono text-sm"
+            className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-muted border border-border text-foreground hover:border-primary/30 transition-all duration-300 font-mono text-xs"
           >
             LinkedIn
-            <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            <ExternalLink className="w-3 h-3 opacity-40 group-hover:opacity-100 transition-opacity" />
           </a>
           <a
             href="mailto:rheaparekh12@gmail.com"
-            className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-accent/10 border border-accent/20 text-accent hover:bg-accent/20 hover:border-accent/40 transition-all duration-300 font-mono text-sm"
+            className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-muted border border-border text-foreground hover:border-primary/30 transition-all duration-300 font-mono text-xs"
           >
             Contact
-            <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            <ExternalLink className="w-3 h-3 opacity-40 group-hover:opacity-100 transition-opacity" />
           </a>
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="w-5 h-8 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-1"
-          >
-            <div className="w-1 h-2 rounded-full bg-muted-foreground/50" />
-          </motion.div>
         </motion.div>
       </div>
     </section>
